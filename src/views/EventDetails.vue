@@ -9,12 +9,13 @@
 <script lang="ts">
 import EventService from "@/services/EventService.js";
 import { defineComponent } from "vue";
+import { EventItem } from "@/types";
 
 export default defineComponent({
   props: ["id"],
   data() {
     return {
-      event: null,
+      event: {} as EventItem,
     };
   },
   created() {
